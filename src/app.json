@@ -1,0 +1,32 @@
+{
+  "pages": [
+    "pages/index/main",
+    "pages/party/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "小饭局",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#000000",
+    "backgroundColor": "#F8F8F8",
+    "selectedColor": "#3797EF",
+    "borderStyle": "white",
+    "position": "bottom",
+    "list": [{
+      "text": "日程",
+      "pagePath": "pages/index/main",
+      "iconPath": "static/images/schedule.png",
+      "selectedIconPath": "static/images/schedule-active.png"
+    }, 
+    {
+      "text": "饭局",
+      "pagePath": "pages/party/main",
+      "iconPath": "static/images/party.png",
+      "selectedIconPath": "static/images/party-active.png"
+    }
+    ]
+  }
+}
