@@ -42,28 +42,33 @@
 
 <script>
 export default {
-    data() {
-        return {
-            switchChecked: true,
-            lauchcolor: "#4C9EEB",
-            busyColor: '#687684'
-        }
+  data() {
+    return {
+      switchChecked: true,
+      lauchcolor: "#4C9EEB",
+      busyColor: "#687684",
+      lauch: [],
+    };
+  },
+  methods: {
+    switchChange() {
+      var a = function(e){
+      console.log(e.detail.value);
+      this.switchChecked = e.detail.value
+      }
+      // this.switchChecked = !this.switchChecked;
+      console.log(this.switchChecked);
+      if (this.switchChecked) {
+        this.lauchcolor = "red";
+        console.log(this.lauchcolor);
+      } else {
+        this.lauchcolor = "#687684";
+      }
     },
-    methods: {
-        switchChange() {
-            this.switchChecked = !this.switchChecked;
-            console.log(this.switchChecked);
-            if (this.switchChecked) {
-                this.lauchcolor = 'red'
-                console.log(this.lauchcolor);
-            } else {
-                this.lauchcolor = '#687684'
-            }
-        },
-        test() {
-            this.lauchcolor = 'pink';
-        }
-    }
+    test() {
+      this.lauchcolor = "pink";
+    },
+  },
 };
 </script>
 
