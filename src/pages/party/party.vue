@@ -1,15 +1,11 @@
 <template>
-  <div>
-    party
-  </div>
+  <div>party</div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
-<style>
+<style lang='scss'>
 
 </style>
