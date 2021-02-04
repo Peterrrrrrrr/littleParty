@@ -1,7 +1,7 @@
 {
   "pages": [
-    "pages/index/main",
-    "pages/party/main"
+    "pages/party/main",
+    "pages/index/main"
   ],
   "window": {
     "backgroundTextStyle": "light",

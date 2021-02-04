@@ -16,7 +16,7 @@
       <div class="party">
         <div class="group">
           <p class="title">中饭</p>
-          <p class="status" :style="{ color: switch1Color }">可约</p>
+          <p class="status" id="lauch" :style="{ color: switch1Color }">{{switch1Text}}</p>
           <switch :checked="switch1Checked" @click="switch1Change" />
         </div>
       </div>
@@ -24,7 +24,7 @@
         <div class="group">
           <p class="title">晚饭</p>
           <p class="status" :style="{ color: lauchcolor }">可约</p>
-          <switch :checked="switchChecked" @click="switchChange" />
+          <switch :checked="switchChecked" @click="switch1Change" />
         </div>
       </div>
       <div class="party">
@@ -43,21 +43,20 @@ export default {
   data() {
     return {
       switchChecked: true,
-      switch1Checked: true,
+      switch1Checked: false,
       switch1Color: "#687684",
+      switch1Text: "不约",
       lauchcolor: "#4C9EEB",
       busyColor: "#687684",
       lauch: [],
     };
   },
   methods: {
-    switch1Change() {
-      var a = function (e) {
-        this.switch1Checked = e.detail.value;
-      };
-      console.log(this.switch1Checked);
+    switch1Change(e) {
+      console.log(e);
+      this.switch1Checked = !this.switch1Checked;
       this.switch1Color = this.switch1Checked ? "#4C9EEB" : "#687684";
-
+      this.switch1Text = this.switch1Checked ? "可约" : "不约";
     },
   },
 };
